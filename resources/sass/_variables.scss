@@ -1,0 +1,56 @@
+html{
+    --body:#F5F5F5;
+
+    --sideBarColor:#F5F5F5;
+    --sideBarTextColor:#333;
+    --sideBarHeaderColor:#BDBDBD;
+    --sideBarActiveItemColor:#B2DFDB;
+    --sideBarActiveItemBeforeColor:#4DB6AC;
+    --sideBarItemHoverColor:#CFD8DC;
+
+    --navBar:#3F51B5;
+    --navBarTextColor:#fff;
+
+    --mian:#F5F5F5;
+    --mainTextColor:#333;
+
+    --cardColor:#fff;
+    --cardBorderColor:rgba(0,0,0,.125);
+    --cardHeaderColor:rgba(0,0,0,.03);
+    --cardFooterColor:rgba(0,0,0,.03);
+    --cardTextColor:#333;
+
+    --formTextColor:#333;
+}
+html.dark{
+    --bosy:#212121;
+
+    --sideBarColor:#2f353a;
+    --sideBarHeaderColor:#202427;
+    --sideBarActiveItemColor:rgba(38, 50, 56, 1);
+    --sideBarActiveItemBeforeColor:rgba(0, 96, 100, 1);
+    --sideBarTextColor:#fff;
+    --sideBarItemHoverColor:#9E9E9E;
+
+    --navBar:#2f353a;
+    --navBarTextColor:#fff;
+
+    --main:#212121;
+    --mainTextColor: #fff;
+
+
+    --cardColor:#333333;
+    --cardBorderColor:#fff;
+    --cardHeaderColor:#424242;
+    --cardFooterColor:#424242;
+    --cardTextColor:#EEEEEE;
+
+    --formTextColor:#fff;
+}
+
+html.transition,
+html.transition *,
+html.transition *::before,
+html.transition *::after{
+    transition: background 0.5s ease-in-out,background-color 0.5s ease-in-out,border-color 0.5s ease-in-out, color 0.5s ease-in-out !important;
+}

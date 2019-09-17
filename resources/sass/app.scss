@@ -1,0 +1,278 @@
+// Fonts
+@import "fonts";
+// Bootstrap
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~hbootstrap4rtl/bootstrap-rtl.min.css";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import "~froala-editor/css/froala_editor.pkgd.min.css";
+@import "~froala-editor/css/froala_style.min.css";
+@import 'variables';
+
+$desktop: 768px;
+$sidBarWidth: 256px;
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+/*--------Side Bar--------*/
+.sideBar {
+    width: 100%;
+    height: auto;
+    background-color: var(--sideBarColor);
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+    z-index: 1000;
+
+    .menu {
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-link {
+        text-decoration: none;
+        height: 50px;
+        line-height: 50px;
+        color: var(--sideBarTextColor);
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-item {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .header-item {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .menu-link:hover {
+        background-color: var(--sideBarItemHoverColor);
+    }
+
+    .menu .menu .menu-link {
+        position: relative;
+    }
+
+    .menu .activeItem .menu-link::before {
+        content: "";
+        position: absolute;
+        width: 5px;
+        right: 0;
+        height: 50px;
+        background-color: var(--sideBarActiveItemBeforeColor);
+    }
+
+    .menu .activeItem .menu-link {
+        background-color: var(--sideBarActiveItemColor);
+    }
+
+    .activeHeader {
+        background-color: var(--sideBarHeaderColor);
+    }
+
+    .activeHeader > .menu-link {
+        background-color: var(--sideBarHeaderColor);
+    }
+
+    .fas {
+        width: 50px;
+        text-align: center;
+    }
+
+    .menu .menu .fas {
+        margin-left: 10px;
+    }
+
+    i.fa-chevron-left {
+        width: auto;
+
+        transition: transform 0.2s ease-in-out;
+        transform: rotate(-90deg);
+    }
+
+    a.collapsed i.fa-chevron-left {
+        transform: rotate(0deg);
+    }
+}
+
+.hamburger {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.sideBar-collapse {
+    height: 0;
+}
+
+/*--------Nav Bar--------*/
+.navbar {
+    background-color: var(--navBar);
+}
+
+.navbar a, .navbar i {
+    color: var(--navBarTextColor);
+}
+
+.navbar-brand-link {
+    text-decoration: none;
+    color: var(--navBarTextColor);
+}
+
+.navbar-brand-link:hover {
+    text-decoration: none;
+    color: var(--navBarTextColor);
+}
+
+.main {
+    background-color: var(--main);
+    min-height: calc(100vh - 56px);
+    overflow: hidden;
+}
+
+@include desktop {
+    .sideBar {
+        position: fixed;
+        top: 56px;
+        transition: width 0.5s ease-in-out;
+        width: $sidBarWidth;
+        max-width: 256px;
+        height: calc(100vh - 56px);
+
+        .menu-link {
+            width: $sidBarWidth;
+        }
+
+        .menu-item {
+            width: $sidBarWidth;
+        }
+
+        .header-item {
+            width: $sidBarWidth;
+        }
+    }
+    .sideBar-collapse {
+        width: 50px;
+    }
+    .sideBar-collapse:hover {
+        width: $sidBarWidth;
+    }
+    .main {
+        transition: width 0.5s ease-in-out, min-width 0.5s ease-in-out, max-width 0.5s ease-in-out, margin-right 0.5s ease-in-out;
+        margin-right: 256px;
+        max-width: calc(100% - 256px);
+        min-width: calc(100% - 256px);
+    }
+    .sideBar-collapse + .main {
+        max-width: calc(100% - 50px);
+        min-width: calc(100% - 50px);
+        margin-right: 50px;
+    }
+}
+
+/*--------User--------*/
+.user p{
+    padding:5px;
+    margin:0;
+    font-size:16px;
+}
+.user .card-footer{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:5px;
+}
+.user .card-header{
+    padding:5px;
+}
+.user .card-body{
+    padding:5px;
+}
+
+.user .avatar{
+    width:100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/*--------Card--------*/
+.card{
+    border-color: var(--cardBorderColor);
+    background-color: var(--cardColor);
+}
+
+.card-header{
+    border-color: var(--cardBorderColor);
+    background-color: var(--cardHeaderColor);
+}
+
+.card-footer{
+    border-color: var(--cardBorderColor);
+    background-color: var(--cardFooterColor);
+}
+.card p,.card h1,.card h2,.card h3,.card h4,.card h5,.card h6,.card span{
+    color: var(--cardTextColor);
+}
+
+
+/*--------Form--------*/
+form label,form input[type="file"]{
+    color: var(--formTextColor);
+}
+
+
+/*--------Article--------*/
+
+.article{
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    .article-img{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .article-body{
+        background: rgba(33,33,33,0.5);
+        width:100%;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        &:hover{
+            opacity: 1;
+        }
+        .article-title{
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom:0;
+            color: #fff;
+            padding:10px;
+            margin: 0;
+        }
+        .article-operations{
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:10px;
+        }
+    }
+}
+
+
+
+
