@@ -4,8 +4,8 @@ import "froala-editor/js/plugins/image_manager.min";
 import FroalaEditor from "froala-editor/js/froala_editor.pkgd.min";
 import Joi from "joi-browser";
 import Swal from "sweetalert2";
-import Form from "./common/form";
-import {addArticleQuery} from "../utils/graphQL";
+import Form from "../common/form";
+import {addArticleQuery} from "../../utils/graphQL";
 
 class AddArticle extends Form{
     state={

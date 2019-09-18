@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="818358ea-d696-425a-8557-5251e9aab255" name="Default Changelist" comment="" />
+    <list default="true" id="818358ea-d696-425a-8557-5251e9aab255" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/GraphQL/Mutations/AddArticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/GraphQL/Mutations/AddArticle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/GraphQL/Queries/AllUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/GraphQL/Queries/AllUsers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/graphql.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/graphql.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Application.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/auth/components/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/auth/components/login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/addArticle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/articles/addArticle.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/addUser.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/users/addUser.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/article.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/articles/article.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/articles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/articles/articles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/common/navBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/common/navBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/content.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/editArticle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/articles/editArticle.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/editUser.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/users/editUser.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/user.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/users/users.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/services/authServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/services/authServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/services/httpServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/services/httpServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/utils/graphQL.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/utils/graphQL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +47,9 @@
         <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -127,22 +154,27 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1QKOu6DlNyAmzf30gnBxCZgw67t" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/auth" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/components/users" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\Laravel\ReactNews\resources\js\components\common" />
-      <recent name="G:\Laravel\ReactNews\resources\js\components" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Laravel\ReactNews\resources\js\components\users" />
       <recent name="G:\Laravel\ReactNews\resources\views\auth" />
       <recent name="G:\Laravel\ReactNews\public\images" />
       <recent name="G:\Laravel\ReactNews\resources\views" />
       <recent name="G:\Laravel\ReactNews\public\fonts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\Laravel\ReactNews\resources\js\components\users" />
+      <recent name="G:\Laravel\ReactNews\resources\js\components\articles" />
+      <recent name="G:\Laravel\ReactNews\resources\js\components\common" />
+      <recent name="G:\Laravel\ReactNews\resources\js\components" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -198,11 +230,27 @@
       <workItem from="1567973617272" duration="5788000" />
       <workItem from="1568455001960" duration="14084000" />
       <workItem from="1568534290081" duration="10769000" />
-      <workItem from="1568713029972" duration="13794000" />
+      <workItem from="1568713029972" duration="13986000" />
+      <workItem from="1568742682108" duration="5307000" />
+      <workItem from="1568791981794" duration="4360000" />
+      <workItem from="1568813952144" duration="814000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

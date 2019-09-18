@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import Joi from "joi-browser";
 import Swal from "sweetalert2";
-import Form from "./common/form";
+import Form from "../common/form";
 
 class AddUser extends Form {
     state = {

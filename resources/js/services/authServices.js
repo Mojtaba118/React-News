@@ -22,8 +22,8 @@ const logout=()=>{
     localStorage.removeItem(tokenKey);
 };
 
-const setToken=jwt=>{
-    localStorage.setItem(tokenKey,jwt);
+const setToken=token=>{
+    localStorage.setItem(tokenKey,token);
 };
 
 const getToken=()=>{

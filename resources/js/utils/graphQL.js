@@ -36,7 +36,7 @@ export const getArticleQuery = (id) => {
             id
         }
     };
-    return JSON.stringify(getArticle);
+    return getArticle;
 };
 export const editArticleQuery = (id, title, body) => {
     const editQuery = {
@@ -51,7 +51,7 @@ export const editArticleQuery = (id, title, body) => {
         }
     };
 
-    return JSON.stringify(editQuery);
+    return editQuery;
 };
 export const allArticlesQuery = () => {
     const articlesQuery = {
@@ -65,7 +65,7 @@ export const allArticlesQuery = () => {
             }`,
         variables: {}
     };
-    return JSON.stringify(articlesQuery);
+    return articlesQuery;
 }
 export const deleteArticleQuery = id => {
     const dataQuery = {
@@ -78,11 +78,78 @@ export const deleteArticleQuery = id => {
             id
         }
     };
-    return JSON.stringify(dataQuery);
+    return dataQuery;
 }
 
 //user queries
-
+export const allUsersQuery = () => {
+    let dataQuery = {
+        query: `
+                query getAllUsers{
+                    allUsers{
+                        id,
+                        name,
+                        avatar,
+                        email,
+                    }
+                }
+            `,
+        variables: {}
+    };
+    return dataQuery;
+}
+export const deleteUserQuery = (id) => {
+    const dataQuery = {
+        query: `
+            mutation deleteUser($id:Int!){
+                deleteUser(id:$id)
+            }
+        `,
+        variables: {
+            id
+        }
+    };
+    return dataQuery;
+}
+export const getUserQuery = (id) => {
+    const userQuery = {
+        query: `
+                query user($id:Int!){
+                    user(id:$id){
+                        id,
+                        name,
+                        email,
+                        is_admin,
+                        avatar,
+                        created_at,
+                        updated_at
+                    }
+                }
+            `,
+        variables: {
+            id
+        }
+    }
+    return userQuery;
+}
+export const editUserQuery = (id,name,email,password,isAdmin) => {
+    const dataQuery = {
+        query: `
+                mutation editUsers($id:Int!,$name:String!,$email:String!,$password:String,$is_admin:Boolean,$avatar:Upload){
+                    editUser(id:$id,name:$name,email:$email,password:$password,is_admin:$is_admin,avatar:$avatar)
+                }
+            `,
+        variables: {
+            "id": id,
+            "name": name,
+            "email": email,
+            "password": password,
+            "is_admin": isAdmin,
+            "avatar": null,
+        }
+    };
+    return dataQuery;
+}
 
 
 //auth queries

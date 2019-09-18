@@ -71076,6 +71076,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _services_authServices__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/authServices */ "./resources/js/services/authServices.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -71101,6 +71103,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -71606,8 +71609,8 @@ var logout = function logout() {
   localStorage.removeItem(tokenKey);
 };
 
-var setToken = function setToken(jwt) {
-  localStorage.setItem(tokenKey, jwt);
+var setToken = function setToken(token) {
+  localStorage.setItem(tokenKey, token);
 };
 
 var getToken = function getToken() {
@@ -71649,12 +71652,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 
+
+var setHeaderToken = function setHeaderToken(token) {
+  axios__WEBPACK_IMPORTED_MODULE_0___default.a.defaults.headers.common["Authorization"] = "Bearer ".concat(token);
+};
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   get: axios__WEBPACK_IMPORTED_MODULE_0___default.a.get,
   post: axios__WEBPACK_IMPORTED_MODULE_0___default.a.post,
   put: axios__WEBPACK_IMPORTED_MODULE_0___default.a.put,
   patch: axios__WEBPACK_IMPORTED_MODULE_0___default.a.patch,
-  "delete": axios__WEBPACK_IMPORTED_MODULE_0___default.a["delete"]
+  "delete": axios__WEBPACK_IMPORTED_MODULE_0___default.a["delete"],
+  setHeaderToken: setHeaderToken
 });
 
 /***/ }),
@@ -71663,7 +71672,7 @@ __webpack_require__.r(__webpack_exports__);
 /*!***************************************!*\
   !*** ./resources/js/utils/graphQL.js ***!
   \***************************************/
-/*! exports provided: addArticleQuery, getArticleQuery, editArticleQuery, allArticlesQuery, deleteArticleQuery, registerQuery, loginQuery */
+/*! exports provided: addArticleQuery, getArticleQuery, editArticleQuery, allArticlesQuery, deleteArticleQuery, allUsersQuery, deleteUserQuery, getUserQuery, editUserQuery, registerQuery, loginQuery */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -71673,6 +71682,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editArticleQuery", function() { return editArticleQuery; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "allArticlesQuery", function() { return allArticlesQuery; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteArticleQuery", function() { return deleteArticleQuery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "allUsersQuery", function() { return allUsersQuery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteUserQuery", function() { return deleteUserQuery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getUserQuery", function() { return getUserQuery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editUserQuery", function() { return editUserQuery; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "registerQuery", function() { return registerQuery; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loginQuery", function() { return loginQuery; });
 //article queries
@@ -71694,7 +71707,7 @@ var getArticleQuery = function getArticleQuery(id) {
       id: id
     }
   };
-  return JSON.stringify(getArticle);
+  return getArticle;
 };
 var editArticleQuery = function editArticleQuery(id, title, body) {
   var editQuery = {
@@ -71706,14 +71719,14 @@ var editArticleQuery = function editArticleQuery(id, title, body) {
       "image": null
     }
   };
-  return JSON.stringify(editQuery);
+  return editQuery;
 };
 var allArticlesQuery = function allArticlesQuery() {
   var articlesQuery = {
     query: "query getAllArticles{\n                allArticles{\n                    id,\n                    title,\n                    body,\n                    image\n                }\n            }",
     variables: {}
   };
-  return JSON.stringify(articlesQuery);
+  return articlesQuery;
 };
 var deleteArticleQuery = function deleteArticleQuery(id) {
   var dataQuery = {
@@ -71722,9 +71735,48 @@ var deleteArticleQuery = function deleteArticleQuery(id) {
       id: id
     }
   };
-  return JSON.stringify(dataQuery);
+  return dataQuery;
 }; //user queries
-//auth queries
+
+var allUsersQuery = function allUsersQuery() {
+  var dataQuery = {
+    query: "\n                query getAllUsers{\n                    allUsers{\n                        id,\n                        name,\n                        avatar,\n                        email,\n                    }\n                }\n            ",
+    variables: {}
+  };
+  return dataQuery;
+};
+var deleteUserQuery = function deleteUserQuery(id) {
+  var dataQuery = {
+    query: "\n            mutation deleteUser($id:Int!){\n                deleteUser(id:$id)\n            }\n        ",
+    variables: {
+      id: id
+    }
+  };
+  return dataQuery;
+};
+var getUserQuery = function getUserQuery(id) {
+  var userQuery = {
+    query: "\n                query user($id:Int!){\n                    user(id:$id){\n                        id,\n                        name,\n                        email,\n                        is_admin,\n                        avatar,\n                        created_at,\n                        updated_at\n                    }\n                }\n            ",
+    variables: {
+      id: id
+    }
+  };
+  return userQuery;
+};
+var editUserQuery = function editUserQuery(id, name, email, password, isAdmin) {
+  var dataQuery = {
+    query: "\n                mutation editUsers($id:Int!,$name:String!,$email:String!,$password:String,$is_admin:Boolean,$avatar:Upload){\n                    editUser(id:$id,name:$name,email:$email,password:$password,is_admin:$is_admin,avatar:$avatar)\n                }\n            ",
+    variables: {
+      "id": id,
+      "name": name,
+      "email": email,
+      "password": password,
+      "is_admin": isAdmin,
+      "avatar": null
+    }
+  };
+  return dataQuery;
+}; //auth queries
 
 var registerQuery = function registerQuery(name, email, password) {
   var registerQuery = {

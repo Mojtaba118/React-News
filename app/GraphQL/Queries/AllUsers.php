@@ -32,7 +32,7 @@ class AllUsers extends Query
 
     public function resolve($root, $args, $context, ResolveInfo $resolveInfo, Closure $getSelectFields)
     {
-        $users=User::all();
+        $users=User::where("id","!=",auth()->user()->id)->get();
         return $users;
     }
 }

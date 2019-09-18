@@ -1,11 +1,11 @@
 import React,{Component} from "react";
 import { Switch, Redirect} from "react-router-dom";
-import Users from "./users";
-import AddUser from "./addUser";
-import EditUser from "./editUser";
-import Articles from "./articles";
-import AddArticle from "./addArticle";
-import EditArticle from "./editArticle";
+import Users from "./users/users";
+import AddUser from "./users/addUser";
+import EditUser from "./users/editUser";
+import Articles from "./articles/articles";
+import AddArticle from "./articles/addArticle";
+import EditArticle from "./articles/editArticle";
 import PrivateRoute from "./common/privateRoute";
 
 class Content extends Component{

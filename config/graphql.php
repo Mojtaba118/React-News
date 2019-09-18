@@ -116,6 +116,7 @@ return [
             'query' => [
                 'user'=>\App\GraphQL\Queries\User::class,
                 'allUsers'=>\App\GraphQL\Queries\AllUsers::class,
+                'allArticles'=>\App\GraphQL\Queries\AllArticles::class,
             ],
             'mutation' => [
                 "addUser"=>\App\GraphQL\Mutations\AddUser::class,
@@ -128,16 +129,6 @@ return [
             'middleware' => ["auth:api","admin"],
             'method'     => ['get', 'post'],
         ],
-        'user' => [
-            'query' => [
-                'user'=>\App\GraphQL\Queries\GetUserWithToken::class,
-            ],
-            'mutation' => [
-
-            ],
-            'middleware' => ["auth:api"],
-            'method'     => ['get', 'post'],
-        ]
     ],
 
     // The types available in the application. You can then access it from the

@@ -53,7 +53,7 @@ class AddArticle extends Mutation
         $fullPath="{$filePath}/{$fileName}";
         $file->move(public_path($filePath),$fileName);
         $article=Article::create([
-            'user_id'=>1,
+            'user_id'=>auth()->user()->id,
             'title'=>$args['title'],
             'body'=>$args['body'],
             'image'=>$fullPath,

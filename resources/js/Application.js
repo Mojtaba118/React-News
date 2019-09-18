@@ -4,6 +4,8 @@ import SideBar from "./components/common/sideBar";
 import Content from "./components/content";
 import {switchToDarkMode} from "./admin";
 import auth from "./services/authServices";
+import http from "./services/httpServices";
+
 
 class App extends Component {
     componentDidMount() {
@@ -15,6 +17,7 @@ class App extends Component {
             location.replace("/not-found");
             return null;
         }
+        http.setHeaderToken(auth.getToken());
         return (
             <React.Fragment>
                 <NavBar/>
