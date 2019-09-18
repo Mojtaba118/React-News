@@ -71672,7 +71672,7 @@ var setHeaderToken = function setHeaderToken(token) {
 /*!***************************************!*\
   !*** ./resources/js/utils/graphQL.js ***!
   \***************************************/
-/*! exports provided: addArticleQuery, getArticleQuery, editArticleQuery, allArticlesQuery, deleteArticleQuery, allUsersQuery, deleteUserQuery, getUserQuery, editUserQuery, registerQuery, loginQuery */
+/*! exports provided: addArticleQuery, getArticleQuery, editArticleQuery, allArticlesQuery, deleteArticleQuery, addUserQuery, getUserQuery, editUserQuery, allUsersQuery, deleteUserQuery, loginQuery, registerQuery */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -71682,12 +71682,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editArticleQuery", function() { return editArticleQuery; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "allArticlesQuery", function() { return allArticlesQuery; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteArticleQuery", function() { return deleteArticleQuery; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "allUsersQuery", function() { return allUsersQuery; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteUserQuery", function() { return deleteUserQuery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addUserQuery", function() { return addUserQuery; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getUserQuery", function() { return getUserQuery; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editUserQuery", function() { return editUserQuery; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "registerQuery", function() { return registerQuery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "allUsersQuery", function() { return allUsersQuery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteUserQuery", function() { return deleteUserQuery; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loginQuery", function() { return loginQuery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "registerQuery", function() { return registerQuery; });
 //article queries
 var addArticleQuery = function addArticleQuery(title, body) {
   var createQuery = {
@@ -71698,7 +71699,7 @@ var addArticleQuery = function addArticleQuery(title, body) {
       "image": null
     }
   };
-  return JSON.stringify(createQuery);
+  return createQuery;
 };
 var getArticleQuery = function getArticleQuery(id) {
   var getArticle = {
@@ -71738,18 +71739,15 @@ var deleteArticleQuery = function deleteArticleQuery(id) {
   return dataQuery;
 }; //user queries
 
-var allUsersQuery = function allUsersQuery() {
+var addUserQuery = function addUserQuery(name, email, password, isAdmin) {
   var dataQuery = {
-    query: "\n                query getAllUsers{\n                    allUsers{\n                        id,\n                        name,\n                        avatar,\n                        email,\n                    }\n                }\n            ",
-    variables: {}
-  };
-  return dataQuery;
-};
-var deleteUserQuery = function deleteUserQuery(id) {
-  var dataQuery = {
-    query: "\n            mutation deleteUser($id:Int!){\n                deleteUser(id:$id)\n            }\n        ",
+    query: "\n                mutation addUsers($name:String!,$email:String!,$password:String!,$is_admin:Boolean,$avatar:Upload){\n                    addUser(name:$name,email:$email,password:$password,is_admin:$is_admin,avatar:$avatar)\n                }\n            ",
     variables: {
-      id: id
+      "name": name,
+      "email": email,
+      "password": password,
+      "is_admin": isAdmin,
+      "avatar": null
     }
   };
   return dataQuery;
@@ -71776,8 +71774,34 @@ var editUserQuery = function editUserQuery(id, name, email, password, isAdmin) {
     }
   };
   return dataQuery;
+};
+var allUsersQuery = function allUsersQuery() {
+  var dataQuery = {
+    query: "\n                query getAllUsers{\n                    allUsers{\n                        id,\n                        name,\n                        avatar,\n                        email,\n                    }\n                }\n            ",
+    variables: {}
+  };
+  return dataQuery;
+};
+var deleteUserQuery = function deleteUserQuery(id) {
+  var dataQuery = {
+    query: "\n            mutation deleteUser($id:Int!){\n                deleteUser(id:$id)\n            }\n        ",
+    variables: {
+      id: id
+    }
+  };
+  return dataQuery;
 }; //auth queries
 
+var loginQuery = function loginQuery(email, password) {
+  var loginQuery = {
+    query: "\n            mutation login($email:String,$password:String){\n                login(email:$email,password:$password){\n                    token\n                }\n            }\n        ",
+    variables: {
+      email: email,
+      password: password
+    }
+  };
+  return loginQuery;
+};
 var registerQuery = function registerQuery(name, email, password) {
   var registerQuery = {
     query: "\n            mutation register($name:String,$email:String,$password:String){\n                register(name:$name,email:$email,password:$password)\n            }\n        ",
@@ -71788,16 +71812,6 @@ var registerQuery = function registerQuery(name, email, password) {
     }
   };
   return registerQuery;
-};
-var loginQuery = function loginQuery(email, password) {
-  var loginQuery = {
-    query: "\n            mutation login($email:String,$password:String){\n                login(email:$email,password:$password){\n                    token\n                }\n            }\n        ",
-    variables: {
-      email: email,
-      password: password
-    }
-  };
-  return loginQuery;
 };
 
 /***/ }),

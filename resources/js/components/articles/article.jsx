@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 
 const Article=({article,onDelete})=>{
-    return <div className="col-12 col-sm-6 col-md-4 col-lg-3">
+    return <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
        <div className="article">
            <img src={article.image} alt="" className="article-img"/>
            <div className="article-body">

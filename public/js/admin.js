@@ -87063,25 +87063,34 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var froala_editor_js_plugins_image_min__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! froala-editor/js/plugins/image.min */ "./node_modules/froala-editor/js/plugins/image.min.js");
-/* harmony import */ var froala_editor_js_plugins_image_min__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(froala_editor_js_plugins_image_min__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var froala_editor_js_plugins_image_manager_min__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! froala-editor/js/plugins/image_manager.min */ "./node_modules/froala-editor/js/plugins/image_manager.min.js");
-/* harmony import */ var froala_editor_js_plugins_image_manager_min__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(froala_editor_js_plugins_image_manager_min__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var froala_editor_js_froala_editor_pkgd_min__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! froala-editor/js/froala_editor.pkgd.min */ "./node_modules/froala-editor/js/froala_editor.pkgd.min.js");
-/* harmony import */ var froala_editor_js_froala_editor_pkgd_min__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(froala_editor_js_froala_editor_pkgd_min__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var joi_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! joi-browser */ "./node_modules/joi-browser/dist/joi-browser.js");
-/* harmony import */ var joi_browser__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(joi_browser__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _common_form__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../common/form */ "./resources/js/components/common/form.jsx");
-/* harmony import */ var _utils_graphQL__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../utils/graphQL */ "./resources/js/utils/graphQL.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var froala_editor_js_plugins_image_min__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! froala-editor/js/plugins/image.min */ "./node_modules/froala-editor/js/plugins/image.min.js");
+/* harmony import */ var froala_editor_js_plugins_image_min__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(froala_editor_js_plugins_image_min__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var froala_editor_js_plugins_image_manager_min__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! froala-editor/js/plugins/image_manager.min */ "./node_modules/froala-editor/js/plugins/image_manager.min.js");
+/* harmony import */ var froala_editor_js_plugins_image_manager_min__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(froala_editor_js_plugins_image_manager_min__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var froala_editor_js_froala_editor_pkgd_min__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! froala-editor/js/froala_editor.pkgd.min */ "./node_modules/froala-editor/js/froala_editor.pkgd.min.js");
+/* harmony import */ var froala_editor_js_froala_editor_pkgd_min__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(froala_editor_js_froala_editor_pkgd_min__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var joi_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! joi-browser */ "./node_modules/joi-browser/dist/joi-browser.js");
+/* harmony import */ var joi_browser__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(joi_browser__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _common_form__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../common/form */ "./resources/js/components/common/form.jsx");
+/* harmony import */ var _utils_graphQL__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../utils/graphQL */ "./resources/js/utils/graphQL.js");
+/* harmony import */ var _services_httpServices__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../services/httpServices */ "./resources/js/services/httpServices.js");
+
+
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -87100,6 +87109,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -87136,70 +87146,89 @@ function (_Form) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "schema", {
-      title: joi_browser__WEBPACK_IMPORTED_MODULE_4___default.a.string().max(255).required().label("عنوان مقاله")
+      title: joi_browser__WEBPACK_IMPORTED_MODULE_5___default.a.string().max(255).required().label("عنوان مقاله")
     });
 
-    _defineProperty(_assertThisInitialized(_this), "doSubmit", function (e) {
-      var errors = _objectSpread({}, _this.state.errors);
+    _defineProperty(_assertThisInitialized(_this), "doSubmit",
+    /*#__PURE__*/
+    function () {
+      var _ref = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(e) {
+        var errors, files, file, data, createQuery, map, fd, _ref2, resData;
 
-      var file = document.querySelector("#image").files[0];
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                errors = _objectSpread({}, _this.state.errors);
+                files = document.querySelector("#image").files;
 
-      if (!file) {
-        errors["image"] = "عکس مقاله الزامی است.";
+                if (!(files.length === 0)) {
+                  _context.next = 8;
+                  break;
+                }
 
-        _this.setState({
-          errors: errors
-        });
+                errors["image"] = "عکس مقاله الزامی است.";
 
-        return;
-      } else {
-        delete errors["image"];
+                _this.setState({
+                  errors: errors
+                });
 
-        _this.setState({
-          errors: errors
-        });
-      }
+                return _context.abrupt("return");
 
-      ;
-      var data = _this.state.data;
-      var createQuery = Object(_utils_graphQL__WEBPACK_IMPORTED_MODULE_7__["addArticleQuery"])(data.title, document.querySelector("textarea#body").value);
-      var map = {
-        0: ["variables.image"]
+              case 8:
+                delete errors["image"];
+
+                _this.setState({
+                  errors: errors
+                });
+
+              case 10:
+                file = files[0];
+                data = _this.state.data;
+                createQuery = Object(_utils_graphQL__WEBPACK_IMPORTED_MODULE_8__["addArticleQuery"])(data.title, document.querySelector("textarea#body").value);
+                map = {
+                  0: ["variables.image"]
+                };
+                fd = new FormData();
+                fd.append("operations", JSON.stringify(createQuery));
+                fd.append("map", JSON.stringify(map));
+                fd.append(0, file, file.name);
+                _context.next = 20;
+                return _services_httpServices__WEBPACK_IMPORTED_MODULE_9__["default"].post("/graphql/auth", fd);
+
+              case 20:
+                _ref2 = _context.sent;
+                resData = _ref2.data;
+                resData = resData.data;
+
+                if (resData && resData.addArticle) {
+                  sweetalert2__WEBPACK_IMPORTED_MODULE_6___default.a.fire({
+                    type: "success",
+                    title: "نتیجه",
+                    text: "مقاله با موفقیت افزوده شد."
+                  });
+                } else {
+                  sweetalert2__WEBPACK_IMPORTED_MODULE_6___default.a.fire({
+                    type: "error",
+                    title: "خطا",
+                    text: "خطایی رخ داد."
+                  });
+                }
+
+              case 24:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+
+      return function (_x) {
+        return _ref.apply(this, arguments);
       };
-      var fd = new FormData();
-      fd.append("operations", createQuery);
-      fd.append("map", JSON.stringify(map));
-      fd.append(0, file, file.name);
-      var token = localStorage.getItem("rn_token");
-      fetch("/graphql/auth", {
-        method: "post",
-        headers: {
-          "Accept": "application/json",
-          "Authorization": "Bearer " + token
-        },
-        body: fd
-      }).then(function (res) {
-        return res.json();
-      }).then(function (_ref) {
-        var data = _ref.data;
-
-        if (data && data.addArticle) {
-          sweetalert2__WEBPACK_IMPORTED_MODULE_5___default.a.fire({
-            type: "success",
-            title: "نتیجه",
-            text: "مقاله با موفقیت افزوده شد."
-          });
-        } else {
-          sweetalert2__WEBPACK_IMPORTED_MODULE_5___default.a.fire({
-            type: "error",
-            title: "خطا",
-            text: "خطایی رخ داد."
-          });
-        }
-      })["catch"](function (e) {
-        return console.log(e);
-      });
-    });
+    }());
 
     return _this;
   }
@@ -87207,7 +87236,7 @@ function (_Form) {
   _createClass(AddArticle, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      var editor = new froala_editor_js_froala_editor_pkgd_min__WEBPACK_IMPORTED_MODULE_3___default.a("textarea#body", {
+      var editor = new froala_editor_js_froala_editor_pkgd_min__WEBPACK_IMPORTED_MODULE_4___default.a("textarea#body", {
         imageUploadURL: "/api/admin/article/upload",
         imageUploadMethod: "post",
         imageAllowedTypes: ['jpeg', 'jpg', 'png'],
@@ -87229,14 +87258,14 @@ function (_Form) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("form", {
         onSubmit: this.handleSubmit
       }, this.renderInput("title", "عنوان مقاله"), this.renderBeautyArea("body", "متن مقاله"), this.renderFile("image", "عکس مقاله"), this.renderButton("ثبت اطلاعات"));
     }
   }]);
 
   return AddArticle;
-}(_common_form__WEBPACK_IMPORTED_MODULE_6__["default"]);
+}(_common_form__WEBPACK_IMPORTED_MODULE_7__["default"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (AddArticle);
 
@@ -87261,7 +87290,7 @@ var Article = function Article(_ref) {
   var article = _ref.article,
       onDelete = _ref.onDelete;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-12 col-sm-6 col-md-4 col-lg-3"
+    className: "col-12 col-sm-6 col-md-4 col-lg-3 mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "article"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -88492,14 +88521,24 @@ function (_Component) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var joi_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! joi-browser */ "./node_modules/joi-browser/dist/joi-browser.js");
-/* harmony import */ var joi_browser__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(joi_browser__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _common_form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../common/form */ "./resources/js/components/common/form.jsx");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var joi_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! joi-browser */ "./node_modules/joi-browser/dist/joi-browser.js");
+/* harmony import */ var joi_browser__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(joi_browser__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _common_form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../common/form */ "./resources/js/components/common/form.jsx");
+/* harmony import */ var _utils_graphQL__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/graphQL */ "./resources/js/utils/graphQL.js");
+/* harmony import */ var _services_httpServices__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../services/httpServices */ "./resources/js/services/httpServices.js");
+
+
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -88518,6 +88557,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
 
 
 
@@ -88553,97 +88594,75 @@ function (_Form) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "schema", {
-      name: joi_browser__WEBPACK_IMPORTED_MODULE_1___default.a.string().max(20).required().label("نام و نام خانوادگی"),
-      email: joi_browser__WEBPACK_IMPORTED_MODULE_1___default.a.string().email().required().label("ایمیل"),
-      password: joi_browser__WEBPACK_IMPORTED_MODULE_1___default.a.string().min(6).max(20).required().label("رمز عبور")
+      name: joi_browser__WEBPACK_IMPORTED_MODULE_2___default.a.string().max(20).required().label("نام و نام خانوادگی"),
+      email: joi_browser__WEBPACK_IMPORTED_MODULE_2___default.a.string().email().required().label("ایمیل"),
+      password: joi_browser__WEBPACK_IMPORTED_MODULE_2___default.a.string().min(6).max(20).required().label("رمز عبور")
     });
 
-    _defineProperty(_assertThisInitialized(_this), "doSubmit", function (e) {
-      var data = _this.state.data;
-      var dataQuery = {
-        query: "\n                mutation addUsers($name:String!,$email:String!,$password:String!,$is_admin:Boolean,$avatar:Upload){\n                    addUser(name:$name,email:$email,password:$password,is_admin:$is_admin,avatar:$avatar)\n                }\n            ",
-        variables: {
-          "name": data.name,
-          "email": data.email,
-          "password": data.password,
-          "is_admin": data.isAdmin,
-          "avatar": null
-        }
-      };
-      var file = document.querySelector("#avatar").files[0];
-      var headers = {
-        "Content-Type": "application/json"
-      };
-      var body = JSON.stringify(dataQuery);
-      var map = {
-        0: ["variables.avatar"]
-      };
-      var fd = new FormData();
-      fd.append("operations", JSON.stringify(dataQuery));
-      fd.append("map", JSON.stringify(map));
+    _defineProperty(_assertThisInitialized(_this), "doSubmit",
+    /*#__PURE__*/
+    function () {
+      var _ref = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(e) {
+        var data, addUserQL, sentData, files, file, map, fd, _ref2, resData;
 
-      if (file) {
-        fd.append(0, file, file.name);
-        headers = {};
-        body = fd;
-      }
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                data = _this.state.data;
+                addUserQL = Object(_utils_graphQL__WEBPACK_IMPORTED_MODULE_5__["addUserQuery"])(data.name, data.email, data.password, data.isAdmin);
+                ;
+                sentData = addUserQL;
+                files = document.querySelector("#avatar").files;
 
-      var token = localStorage.getItem("rn_token");
-      headers["Authorization"] = "Bearer " + token;
-      headers["Accept"] = "application/json";
-      fetch("/graphql/auth", {
-        method: "post",
-        headers: headers,
-        body: body
-      }).then(function (res) {
-        return res.json();
-      }).then(function (_ref) {
-        var data = _ref.data,
-            errors = _ref.errors;
+                if (files.length) {
+                  file = files[0];
+                  map = {
+                    0: ["variables.avatar"]
+                  };
+                  fd = new FormData();
+                  fd.append("operations", JSON.stringify(addUserQL));
+                  fd.append("map", JSON.stringify(map));
+                  fd.append(0, file, file.name);
+                  sentData = fd;
+                }
 
-        if (data.addUser) {
-          sweetalert2__WEBPACK_IMPORTED_MODULE_2___default.a.fire({
-            type: "success",
-            title: "نتیجه",
-            text: "کاربر با موفقیت افزوده شد."
-          });
-        } else {
-          var error = {};
-          var _iteratorNormalCompletion = true;
-          var _didIteratorError = false;
-          var _iteratorError = undefined;
+                _context.next = 8;
+                return _services_httpServices__WEBPACK_IMPORTED_MODULE_6__["default"].post("/graphql/auth", sentData);
 
-          try {
-            for (var _iterator = errors[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-              var err = _step.value;
+              case 8:
+                _ref2 = _context.sent;
+                resData = _ref2.data;
+                resData = resData.data;
 
-              for (var field in err.extensions.validation) {
-                error[field] = err.extensions.validation[field][0];
-              }
-            }
-          } catch (err) {
-            _didIteratorError = true;
-            _iteratorError = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion && _iterator["return"] != null) {
-                _iterator["return"]();
-              }
-            } finally {
-              if (_didIteratorError) {
-                throw _iteratorError;
-              }
+                if (resData && resData.addUser) {
+                  sweetalert2__WEBPACK_IMPORTED_MODULE_3___default.a.fire({
+                    type: "success",
+                    title: "نتیجه",
+                    text: "کاربر با موفقیت افزوده شد."
+                  });
+                } else {
+                  sweetalert2__WEBPACK_IMPORTED_MODULE_3___default.a.fire({
+                    type: "error",
+                    title: "خطا",
+                    text: "خطایی رخ داد."
+                  });
+                }
+
+              case 12:
+              case "end":
+                return _context.stop();
             }
           }
+        }, _callee);
+      }));
 
-          _this.setState({
-            errors: error
-          });
-        }
-      })["catch"](function (e) {
-        return console.log(e);
-      });
-    });
+      return function (_x) {
+        return _ref.apply(this, arguments);
+      };
+    }());
 
     return _this;
   }
@@ -88651,7 +88670,7 @@ function (_Form) {
   _createClass(AddUser, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("form", {
         action: "#",
         method: "post",
         onSubmit: this.handleSubmit
@@ -88660,7 +88679,7 @@ function (_Form) {
   }]);
 
   return AddUser;
-}(_common_form__WEBPACK_IMPORTED_MODULE_3__["default"]);
+}(_common_form__WEBPACK_IMPORTED_MODULE_4__["default"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (AddUser);
 
@@ -88942,7 +88961,7 @@ var User = function User(_ref) {
   var user = _ref.user,
       onDelete = _ref.onDelete;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-12 col-sm-6 col-md-4 col-lg-3 user"
+    className: "col-12 col-sm-6 col-md-4 col-lg-3 user mb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -89319,7 +89338,7 @@ var setHeaderToken = function setHeaderToken(token) {
 /*!***************************************!*\
   !*** ./resources/js/utils/graphQL.js ***!
   \***************************************/
-/*! exports provided: addArticleQuery, getArticleQuery, editArticleQuery, allArticlesQuery, deleteArticleQuery, allUsersQuery, deleteUserQuery, getUserQuery, editUserQuery, registerQuery, loginQuery */
+/*! exports provided: addArticleQuery, getArticleQuery, editArticleQuery, allArticlesQuery, deleteArticleQuery, addUserQuery, getUserQuery, editUserQuery, allUsersQuery, deleteUserQuery, loginQuery, registerQuery */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -89329,12 +89348,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editArticleQuery", function() { return editArticleQuery; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "allArticlesQuery", function() { return allArticlesQuery; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteArticleQuery", function() { return deleteArticleQuery; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "allUsersQuery", function() { return allUsersQuery; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteUserQuery", function() { return deleteUserQuery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addUserQuery", function() { return addUserQuery; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getUserQuery", function() { return getUserQuery; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editUserQuery", function() { return editUserQuery; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "registerQuery", function() { return registerQuery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "allUsersQuery", function() { return allUsersQuery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteUserQuery", function() { return deleteUserQuery; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loginQuery", function() { return loginQuery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "registerQuery", function() { return registerQuery; });
 //article queries
 var addArticleQuery = function addArticleQuery(title, body) {
   var createQuery = {
@@ -89345,7 +89365,7 @@ var addArticleQuery = function addArticleQuery(title, body) {
       "image": null
     }
   };
-  return JSON.stringify(createQuery);
+  return createQuery;
 };
 var getArticleQuery = function getArticleQuery(id) {
   var getArticle = {
@@ -89385,18 +89405,15 @@ var deleteArticleQuery = function deleteArticleQuery(id) {
   return dataQuery;
 }; //user queries
 
-var allUsersQuery = function allUsersQuery() {
+var addUserQuery = function addUserQuery(name, email, password, isAdmin) {
   var dataQuery = {
-    query: "\n                query getAllUsers{\n                    allUsers{\n                        id,\n                        name,\n                        avatar,\n                        email,\n                    }\n                }\n            ",
-    variables: {}
-  };
-  return dataQuery;
-};
-var deleteUserQuery = function deleteUserQuery(id) {
-  var dataQuery = {
-    query: "\n            mutation deleteUser($id:Int!){\n                deleteUser(id:$id)\n            }\n        ",
+    query: "\n                mutation addUsers($name:String!,$email:String!,$password:String!,$is_admin:Boolean,$avatar:Upload){\n                    addUser(name:$name,email:$email,password:$password,is_admin:$is_admin,avatar:$avatar)\n                }\n            ",
     variables: {
-      id: id
+      "name": name,
+      "email": email,
+      "password": password,
+      "is_admin": isAdmin,
+      "avatar": null
     }
   };
   return dataQuery;
@@ -89423,8 +89440,34 @@ var editUserQuery = function editUserQuery(id, name, email, password, isAdmin) {
     }
   };
   return dataQuery;
+};
+var allUsersQuery = function allUsersQuery() {
+  var dataQuery = {
+    query: "\n                query getAllUsers{\n                    allUsers{\n                        id,\n                        name,\n                        avatar,\n                        email,\n                    }\n                }\n            ",
+    variables: {}
+  };
+  return dataQuery;
+};
+var deleteUserQuery = function deleteUserQuery(id) {
+  var dataQuery = {
+    query: "\n            mutation deleteUser($id:Int!){\n                deleteUser(id:$id)\n            }\n        ",
+    variables: {
+      id: id
+    }
+  };
+  return dataQuery;
 }; //auth queries
 
+var loginQuery = function loginQuery(email, password) {
+  var loginQuery = {
+    query: "\n            mutation login($email:String,$password:String){\n                login(email:$email,password:$password){\n                    token\n                }\n            }\n        ",
+    variables: {
+      email: email,
+      password: password
+    }
+  };
+  return loginQuery;
+};
 var registerQuery = function registerQuery(name, email, password) {
   var registerQuery = {
     query: "\n            mutation register($name:String,$email:String,$password:String){\n                register(name:$name,email:$email,password:$password)\n            }\n        ",
@@ -89435,16 +89478,6 @@ var registerQuery = function registerQuery(name, email, password) {
     }
   };
   return registerQuery;
-};
-var loginQuery = function loginQuery(email, password) {
-  var loginQuery = {
-    query: "\n            mutation login($email:String,$password:String){\n                login(email:$email,password:$password){\n                    token\n                }\n            }\n        ",
-    variables: {
-      email: email,
-      password: password
-    }
-  };
-  return loginQuery;
 };
 
 /***/ }),

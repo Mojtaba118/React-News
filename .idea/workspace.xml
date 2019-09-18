@@ -3,28 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="818358ea-d696-425a-8557-5251e9aab255" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/GraphQL/Mutations/AddArticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/GraphQL/Mutations/AddArticle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/GraphQL/Queries/AllUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/GraphQL/Queries/AllUsers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/graphql.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/graphql.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/admin.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Application.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/auth/components/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/auth/components/login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/addArticle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/articles/addArticle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/addUser.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/users/addUser.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/article.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/articles/article.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/articles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/articles/articles.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/common/navBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/common/navBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/content.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/editArticle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/articles/editArticle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/editUser.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/users/editUser.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/user.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/users/users.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/services/authServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/services/authServices.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/services/httpServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/services/httpServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/avatars/ctj2FgqZ4UIa9evoVAa3pxZbh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/articles/addArticle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/articles/addArticle.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/articles/article.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/articles/article.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/users/addUser.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/users/addUser.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/users/user.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/users/user.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/utils/graphQL.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/utils/graphQL.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -233,7 +219,8 @@
       <workItem from="1568713029972" duration="13986000" />
       <workItem from="1568742682108" duration="5307000" />
       <workItem from="1568791981794" duration="4360000" />
-      <workItem from="1568813952144" duration="814000" />
+      <workItem from="1568813952144" duration="957000" />
+      <workItem from="1568815118435" duration="1385000" />
     </task>
     <servers />
   </component>

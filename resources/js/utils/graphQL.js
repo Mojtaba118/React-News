@@ -12,7 +12,7 @@ export const addArticleQuery = (title, body) => {
             "image": null
         }
     };
-    return JSON.stringify(createQuery);
+    return createQuery;
 };
 export const getArticleQuery = (id) => {
     const getArticle = {
@@ -82,31 +82,19 @@ export const deleteArticleQuery = id => {
 }
 
 //user queries
-export const allUsersQuery = () => {
-    let dataQuery = {
-        query: `
-                query getAllUsers{
-                    allUsers{
-                        id,
-                        name,
-                        avatar,
-                        email,
-                    }
+export const addUserQuery=(name,email,password,isAdmin)=>{
+    const dataQuery={
+        query:`
+                mutation addUsers($name:String!,$email:String!,$password:String!,$is_admin:Boolean,$avatar:Upload){
+                    addUser(name:$name,email:$email,password:$password,is_admin:$is_admin,avatar:$avatar)
                 }
             `,
-        variables: {}
-    };
-    return dataQuery;
-}
-export const deleteUserQuery = (id) => {
-    const dataQuery = {
-        query: `
-            mutation deleteUser($id:Int!){
-                deleteUser(id:$id)
-            }
-        `,
-        variables: {
-            id
+        variables:{
+            "name":name,
+            "email":email,
+            "password":password,
+            "is_admin":isAdmin,
+            "avatar":null,
         }
     };
     return dataQuery;
@@ -150,24 +138,37 @@ export const editUserQuery = (id,name,email,password,isAdmin) => {
     };
     return dataQuery;
 }
-
-
-//auth queries
-export const registerQuery = (name, email, password) => {
-    const registerQuery = {
+export const allUsersQuery = () => {
+    let dataQuery = {
         query: `
-            mutation register($name:String,$email:String,$password:String){
-                register(name:$name,email:$email,password:$password)
+                query getAllUsers{
+                    allUsers{
+                        id,
+                        name,
+                        avatar,
+                        email,
+                    }
+                }
+            `,
+        variables: {}
+    };
+    return dataQuery;
+}
+export const deleteUserQuery = (id) => {
+    const dataQuery = {
+        query: `
+            mutation deleteUser($id:Int!){
+                deleteUser(id:$id)
             }
         `,
         variables: {
-            name,
-            email,
-            password
+            id
         }
     };
-    return registerQuery;
-};
+    return dataQuery;
+}
+
+//auth queries
 export const loginQuery = (email, password) => {
     const loginQuery = {
         query: `
@@ -183,4 +184,19 @@ export const loginQuery = (email, password) => {
         }
     };
     return loginQuery;
+};
+export const registerQuery = (name, email, password) => {
+    const registerQuery = {
+        query: `
+            mutation register($name:String,$email:String,$password:String){
+                register(name:$name,email:$email,password:$password)
+            }
+        `,
+        variables: {
+            name,
+            email,
+            password
+        }
+    };
+    return registerQuery;
 };

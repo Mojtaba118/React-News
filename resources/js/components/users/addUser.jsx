@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import Joi from "joi-browser";
 import Swal from "sweetalert2";
 import Form from "../common/form";
+import {addUserQuery} from "../../utils/graphQL";
+import http from "../../services/httpServices";
 
 class AddUser extends Form {
     state = {
@@ -20,67 +22,38 @@ class AddUser extends Form {
         password: Joi.string().min(6).max(20).required().label("رمز عبور")
     };
 
-    doSubmit = (e) => {
+    doSubmit = async (e) => {
         const {data}=this.state;
-        const dataQuery={
-            query:`
-                mutation addUsers($name:String!,$email:String!,$password:String!,$is_admin:Boolean,$avatar:Upload){
-                    addUser(name:$name,email:$email,password:$password,is_admin:$is_admin,avatar:$avatar)
-                }
-            `,
-            variables:{
-                "name":data.name,
-                "email":data.email,
-                "password":data.password,
-                "is_admin":data.isAdmin,
-                "avatar":null,
-            }
-        };
 
-        const file=document.querySelector("#avatar").files[0];
+        const addUserQL=addUserQuery(data.name,data.email,data.password,data.isAdmin);;
+        let sentData=addUserQL;
 
-        let headers={
-            "Content-Type":"application/json"
-        };
-        let body=JSON.stringify(dataQuery);
-
-        const map={0:["variables.avatar"]};
-        let fd = new FormData();
-        fd.append("operations",JSON.stringify(dataQuery));
-        fd.append("map",JSON.stringify(map));
-
-        if (file){
+        const files=document.querySelector("#avatar").files;
+        if (files.length){
+            const file=files[0];
+            const map={0:["variables.avatar"]};
+            let fd = new FormData();
+            fd.append("operations",JSON.stringify(addUserQL));
+            fd.append("map",JSON.stringify(map));
             fd.append(0,file,file.name);
-            headers={};
-            body=fd;
+            sentData=fd;
         }
-        const token=localStorage.getItem("rn_token");
-        headers["Authorization"]="Bearer "+token;
-        headers["Accept"]="application/json";
 
-        fetch("/graphql/auth",{
-            method:"post",
-            headers,
-            body
-        }).then(res=>res.json())
-            .then(({data,errors})=>{
-                if (data.addUser){
-                    Swal.fire({
-                        type:"success",
-                        title:"نتیجه",
-                        text:"کاربر با موفقیت افزوده شد."
-                    })
-                }else{
-                    const error={};
-                    for (let err of errors){
-                        for(let field in err.extensions.validation){
-                            error[field]=err.extensions.validation[field][0];
-                        }
-                    }
-                    this.setState({errors:error})
-                }
+        let {data:resData}=await http.post("/graphql/auth",sentData);
+        resData=resData.data;
+        if (resData && resData.addUser){
+            Swal.fire({
+                type:"success",
+                title:"نتیجه",
+                text:"کاربر با موفقیت افزوده شد."
             })
-            .catch(e=>console.log(e));
+        }else{
+            Swal.fire({
+                type:"error",
+                title:"خطا",
+                text:"خطایی رخ داد."
+            })
+        }
     }
 
     render() {
