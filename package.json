@@ -28,7 +28,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "froala-editor": "^3.0.5",
+        "froala-editor": "^4.0.7",
         "hbootstrap4rtl": "^1.0.4",
         "joi-browser": "^13.4.0",
         "jwt-decode": "^2.2.0",
